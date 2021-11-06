@@ -4,7 +4,10 @@ Sentiment Analysis has many impactful real world applications particularly in ec
 
 ## Data Overview and Criteria for success
 
-The data for for acccomplishing this task was taken from kaggle (link in sources section), and it consists of 4846 news headlines with labeled sentiments. There not an equal amount of examples for each sentiment. This is called class imbalance. To overcome this imbalance, the metrics we are most concerned about are precision and recall scores for positive and negative sentiment headlines. Using this metric as our metric for performance has two advantages, it combats against the class imbalance that we have, and it makes our model accuracy more relavent to the real world. If an investment bank is looking to use NLP to classify financial news, we're going to want to know when we predict a positive sentiment, what is the likelihood that the article is actually positive. This metric can be described by recall. Additionally, when we're going to want to measure of all of the news that we know was positive how many of them were correctly classfiied as such by our model. This metric is known as precision, and for this project our goal is to have over 75 % precision and recall for our model.
+The data for for acccomplishing this task was taken from kaggle (link in sources section), and it consists of 4846 news headlines with labeled sentiments. There are not an equal amount of examples for each sentiment. This is called class imbalance.
+
+
+To overcome this imbalance, the metrics we are most concerned about are precision and recall scores for positive and negative sentiment headlines. Using this metric as our metric for performance has two advantages, it combats against the class imbalance that we have, and it makes our model accuracy more relavent to the real world. If an investment bank is looking to use NLP to classify financial news, we're going to want to know when we predict a positive sentiment, what is the likelihood that the article is actually positive. This metric can be described by recall. Additionally, we want a metric for the percentage of labeled positive news that was correctly classified by our model. This metric is known as precision, and for this project our goal is to have over 75 % precision and recall for our model.
 
 ## Bag of Words
 
@@ -14,9 +17,9 @@ The first approach is a BOW (Bag Of Words) model. BOW model is simply taking the
 
 This can be represented by the following dataframe:
 
+I did not include every column, but you can see how our model will use the information from the headline to make a prediction. Using word counts can give us some useful plots for understanding which words contribute to news sentiment.
 
 
-I did not include every column, but
-
+## RNN
 
 
