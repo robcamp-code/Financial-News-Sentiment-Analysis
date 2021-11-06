@@ -5,7 +5,6 @@ Sentiment Analysis has many impactful real world applications particularly in ec
 ## Data Overview and Criteria for success
 
 The data for for acccomplishing this task was taken from kaggle (link in sources section), and it consists of 4846 news headlines with labeled sentiments. There are not an equal amount of examples for each sentiment. This is called class imbalance.
-![newplot(1)](https://user-images.githubusercontent.com/59036285/140618441-70e5bd5e-cb01-4d28-a017-4393f8885ea1.png)
 ![newplot(2)](https://user-images.githubusercontent.com/59036285/140618447-9263ee1a-72a1-4f51-9017-acfbde7b5244.png)
 To overcome this imbalance, the metrics we are most concerned about are precision and recall scores for positive and negative sentiment headlines. Using this metric as our metric for performance has two advantages, it combats against the class imbalance that we have, and it makes our model accuracy more relavent to the real world. If an investment bank is looking to use NLP to classify financial news, we're going to want to know when we predict a positive sentiment, what is the likelihood that the article is actually positive. This metric can be described by recall. Additionally, we want a metric for the percentage of labeled positive news that was correctly classified by our model. This metric is known as precision, and for this project our goal is to have over 75 % precision and recall for our model.
 
@@ -23,14 +22,12 @@ This can be represented by the following dataframe:
 
 
 I did not include every column, but you can see how our model will use the information from the headline to make a prediction. Using word counts can give us some useful plots for understanding which words contribute to news sentiment.
-![increase](https://user-images.githubusercontent.com/59036285/140618440-f2c10db5-4672-4965-89ce-06c1a5ba215a.png)
-
-
-
-![profit](https://user-images.githubusercontent.com/59036285/140618449-43b5b793-a33c-4325-9bd8-b59ea7e6aeb9.png)
 
 ![said](https://user-images.githubusercontent.com/59036285/140618452-8550893e-028b-4dba-a56b-20eb714d3615.png)
 
+![increase](https://user-images.githubusercontent.com/59036285/140618440-f2c10db5-4672-4965-89ce-06c1a5ba215a.png)
+
+![profit](https://user-images.githubusercontent.com/59036285/140618449-43b5b793-a33c-4325-9bd8-b59ea7e6aeb9.png)
 
 ![BOW_performance](https://user-images.githubusercontent.com/59036285/140618437-dc311af8-35f5-4f43-bee4-9ce6c5fba0a7.png)
 
