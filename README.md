@@ -8,6 +8,13 @@ The data for for acccomplishing this task was taken from kaggle (link in sources
 ![newplot(2)](https://user-images.githubusercontent.com/59036285/140618447-9263ee1a-72a1-4f51-9017-acfbde7b5244.png)
 To overcome this imbalance, the metrics we are most concerned about are precision and recall scores for positive and negative sentiment headlines. Using this metric as our metric for performance has two advantages, it combats against the class imbalance that we have, and it makes our model accuracy more relavent to the real world. If an investment bank is looking to use NLP to classify financial news, we're going to want to know when we predict a positive sentiment, what is the likelihood that the article is actually positive. This metric can be described by recall. Additionally, we want a metric for the percentage of labeled positive news that was correctly classified by our model. This metric is known as precision, and for this project our goal is to have over 75 % precision and recall for our model.
 
+### Model Metrics:
+
+- Precision
+- Recall
+- AUC
+- Accuracy
+
 
 ## Bag of Words
 
@@ -21,15 +28,34 @@ This can be represented by the following dataframe:
 
 
 
-I did not include every column, but you can see how our model will use the information from the headline to make a prediction. Using word counts can give us some useful plots for understanding which words contribute to news sentiment.
+I did not include every column, but you can see how our model will use the information from the headline to make a prediction. Using word counts can give us some useful plots for understanding which words contribute to news sentiment. The plot below shows the probability of each sentiment given that the word said appears in our headline.
 
 ![said](https://user-images.githubusercontent.com/59036285/140618452-8550893e-028b-4dba-a56b-20eb714d3615.png)
 
+An interpretation for one of these bars would be the following. Lets say we want the probability of a positive headline given the headline contains the word said. We can represent that probablility like so:
+
+```math
+P(positive|said) = \frac{probability of a positive aricle given said}{\sqrt{n}}
+```
+
+
+In red are the probabilities given that said appeared in the headline, and in blue are the headlines where said does not appear in the headline. 
+- 
+
+
+Below are other great buzz words that give a bag of words model good insight to the sentiment of the headline
 ![increase](https://user-images.githubusercontent.com/59036285/140618440-f2c10db5-4672-4965-89ce-06c1a5ba215a.png)
 
 ![profit](https://user-images.githubusercontent.com/59036285/140618449-43b5b793-a33c-4325-9bd8-b59ea7e6aeb9.png)
 
+
 ![BOW_performance](https://user-images.githubusercontent.com/59036285/140618437-dc311af8-35f5-4f43-bee4-9ce6c5fba0a7.png)
+<br>
+**Model Metrics**
+- Accuracy:
+- Precision: 
+- Recall:
+- AUC score: 
 
 ## RNN
 
