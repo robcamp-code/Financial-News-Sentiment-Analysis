@@ -26,24 +26,16 @@ This can be represented by the following dataframe:
 
 ![Bow_Example](https://user-images.githubusercontent.com/59036285/140618434-1329e887-d938-409c-b989-82e4438c214d.png)
 
-
-
 I did not include every column, but you can see how our model will use the information from the headline to make a prediction. Using word counts can give us some useful plots for understanding which words contribute to news sentiment. The plot below shows the probability of each sentiment given that the word said appears in our headline.
 
 ![said](https://user-images.githubusercontent.com/59036285/140618452-8550893e-028b-4dba-a56b-20eb714d3615.png)
 
-An interpretation for one of these bars would be the following. Lets say we want the probability of a positive headline given the headline contains the word said. We can represent that probablility like so:
+In red are the probabilities given that said appeared in the headline, and in blue are the headlines where said does not appear in the headline. We can calculate the probability of a positive article given the occurence of "said" in the headline using bayes theorem: 
 
-```math
-P(positive|said) = \frac{probability of a positive aricle given said}{\sqrt{n}}
-```
+<img width="574" alt="Bayes_Theorem" src="https://user-images.githubusercontent.com/59036285/140660817-e49f237e-b96f-406f-bb38-5a723dd587da.png">
 
+The calculation above confirms what we see in the plot. You can view the code in the EDA notebook to see the calculations. The following two plots illustrate the same conditional probabilities with different key words.
 
-In red are the probabilities given that said appeared in the headline, and in blue are the headlines where said does not appear in the headline. 
-- 
-
-
-Below are other great buzz words that give a bag of words model good insight to the sentiment of the headline
 ![increase](https://user-images.githubusercontent.com/59036285/140618440-f2c10db5-4672-4965-89ce-06c1a5ba215a.png)
 
 ![profit](https://user-images.githubusercontent.com/59036285/140618449-43b5b793-a33c-4325-9bd8-b59ea7e6aeb9.png)
