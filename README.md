@@ -40,18 +40,23 @@ The calculation above confirms what we see in the plot. You can view the code in
 
 ![profit](https://user-images.githubusercontent.com/59036285/140618449-43b5b793-a33c-4325-9bd8-b59ea7e6aeb9.png)
 
-
+Using these word counts we can fit a logistic regression to the data and get decent results. The results are summarized below:
 ![BOW_performance](https://user-images.githubusercontent.com/59036285/140618437-dc311af8-35f5-4f43-bee4-9ce6c5fba0a7.png)
 <br>
+
 **Model Metrics**
 - Accuracy:
 - Precision: 
 - Recall:
 - AUC score: 
 
-## RNN
+The TFIDF vectorizer also accomplished similar metrics, but there is another way we can improve apon bag of words. 
 
+## RNN
 ![RNN_performance](https://user-images.githubusercontent.com/59036285/140618451-d3e5ccd2-7f26-417e-be6c-af5ac329fb35.png)
 
+
 ## Huggingface
+I also compared these results to what state of the art sentence transformers from hugging face can do for sentiment analysis. Huggingface sentence transformers convert your sentence to a 768 dimensional vector representation of the general meaning of the sentence. I used this representation in a logistic regression and got the following results:
 ![HuggingFace_performance](https://user-images.githubusercontent.com/59036285/140618439-2fdca539-357d-47dd-ac8a-08b239a48fac.png)
+The results were better than our custom made RNN's. Ideally our modeling techniques are optimized for our problem and should outperform even state of the art models that are not optimized for our problem. I have a few hypothesis on how to improve our RNNs to be able to outperform Huggingface. I didn't utilize syntatical analysis with my RNN approach. I only utilized semantics by feeding the network glove embeddings of each word. If I combine both syntatical and semantic features to my model. I could be able to outperform Huggingface transformers regardess of their pervasive use. 
